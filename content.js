@@ -13,6 +13,9 @@ function start() {
 
   // エリアの背景にランダムなカラーを指定
   rgbArea.style.backgroundColor = `rgb(${red},${green},${blue})`;
+
+  document.querySelector("#rgb-input").value ="";
+  percent.textContent="";
 }
 function judge() {
   const rgbArea = document.querySelector("div#rgb-area");
@@ -43,4 +46,6 @@ function judge() {
         ansDiff -= 33;
     }
   }
+  const percent =document.querySelector("#percent");
+  percent.textContent=ansDiff;
 }
